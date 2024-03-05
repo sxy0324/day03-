@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var name = 'window';
+        //es5的函数写法
+        var A = {
+            name: 'A',
+            sayHello: function () {
+                console.log(this.name)
+            }
+        }
+        A.sayHello();//输出A
+        var B = {
+            name: 'B',
+        }
+        A.sayHello.call(B);//输出B
+        A.sayHello.call();//不传参数指向全局window对象，输出window，name也就是window
+        //es5函数指的是函数this指向谁使用时的this指向
+        //es6箭头函数this指向，指向的是声明箭头函数时this所在作用域的this指向
+        var name='window'
+        //q全局，this指向window
+        var C={
+            name:'C',
+            sayHello:()=>{
+                console.log(this.name)
+            }
+        }
+        C.sayHello()
+        
+
+    </script>
+</body>
+
+</html>

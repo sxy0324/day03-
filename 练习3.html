@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var name = 'window'
+        var A = {
+            name: 'A', 
+            sayHello: function () {
+                console.log(this.name)
+            }
+        }
+        A.sayHello()
+        var B={
+            name:'B'
+        }
+        A.sayHello.call(B)
+        var name='window'
+        var C={
+            name:'C',
+            sayHello:()=>{
+                console.log(this.name)
+            }
+        }
+        C.sayHello()
+    </script>
+</body>
+
+</html>

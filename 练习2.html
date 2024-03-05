@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function person(){
+            console.log(arguments)
+        }
+        person([1,2,3,4,5,6])
+
+        const fan=(...aaa)=>{
+            console.log(aaa)
+        }
+        fan('小红','小兰','小明')
+
+        const fan1=(a,b,...aaa)=>{
+            console.log(aaa)
+        }
+        fan1('小孩','小妹','小保')
+    </script>
+</body>
+</html>
